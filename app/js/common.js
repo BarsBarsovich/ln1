@@ -1,4 +1,5 @@
-var modal = document.getElementById('modal');
+var modal = document.getElementById('modal'),
+    modal_second = document.getElementById('modal_second');
 
 function showModal() {
     if (modal.classList.contains('active')) {
@@ -10,6 +11,7 @@ function showModal() {
 
 function hideModal() {
     modal.classList.remove('active');
+    modal_second.classList.remove('active');
 }
 
 function syncPhone() {
@@ -27,6 +29,7 @@ function getValue() {
 
 
 function sendForm() {
+    event.preventDefault();
     $.ajax({
         type: "POST",
         url: "./data.php",

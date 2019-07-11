@@ -1,0 +1,618 @@
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  font-family: 'Fira Sans Condensed', sans-serif
+
+$red: #d84940
+$black: #1b1b1d
+
+.section
+  padding: 64px 0
+
+.container
+  padding: 0 16px
+
+.row
+  display: flex
+  flex-flow: row wrap
+
+ul
+  list-style-type: none
+
+a
+  text-decoration: none
+
+a, button
+  cursor: pointer
+
+.section-title
+  &__title
+    font-weight: 800
+    margin: 0 0 24px 0
+    &_white
+      color: #fff
+
+    &_centered
+      text-align: center
+
+  &__subtitle
+    font-weight: 400
+    margin: 0 0 16px 0
+    &_white
+      color: #fff
+
+    &_centered
+      text-align: center
+      color: #cccccc
+      font-weight: 300
+
+      &.section-title__subtitle_pseudo
+        &::after
+          margin: 16px auto
+
+  &__title, &__subtitle
+    &_pseudo
+      &::after
+        display: block
+        content: ''
+        width: 100px
+        height: 4px
+        background: $red
+        margin: 24px 0
+
+  &__button
+    display: block
+    text-align: center
+    width: 100%
+    border: none
+    border-radius: 5px
+    padding: 10px
+
+    &_red
+      background: $red
+      color: #fff
+
+.text
+  &_red
+    color: $red
+    &-underline
+      text-decoration: underline
+
+
+.card
+  margin: 0 0 36px 0
+
+  &__icon
+    display: flex
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    overflow: hidden
+    margin: 0 0 12px 0
+
+    &_black
+      background: $black
+      align-items: flex-end
+      justify-content: flex-end
+
+    &_red
+      background: $red
+      align-items: center
+      justify-content: center
+
+    &-value
+
+      &_black
+        color: #fff
+        font-size: 36px
+        font-weight: 600
+        position: relative
+        bottom: -3px
+        right: 10px
+
+      &_red
+        color: #fff
+        font-size: 64px
+        font-weight: 600
+
+  &__title
+    font-weight: 300
+    font-size: 20px
+    margin: 0 0 12px 0
+
+    &_big
+      font-size: 24px
+      font-weight: 600
+      margin: 0 0 18px 0
+
+  &__subtitle
+    font-size: 16px
+    font-weight: 300
+    margin: 0 0 12px 0
+    color: #666666
+
+    &_policy
+      font-size: 12px
+
+  &_black
+    background: #303030
+    padding: 20px
+    margin: 0
+
+  &_white
+    background: #f5f5f5
+    padding: 20px
+
+
+
+////////////
+//Header section
+.header
+  background: $black
+  padding: 64px 0
+
+  &__image-block
+    width: 100%
+    display: none
+    flex-flow: column wrap
+    margin: 24px 0 0 0
+
+  &-image-block__text
+    font-size: 14px
+    font-weight: 300
+    margin: 12px 0 0 0
+
+  &-image-block__text
+    color: #fff
+
+  &-image-block__image
+    width: 100%
+
+.section-title__title_header
+  color: #fff
+  text-align: center
+  font-size: 24px
+
+  &.section-title__title_pseudo
+    &::after
+      margin: 12px auto
+      display: block
+
+.section-title__subtitle_header
+  color: #cccccc
+  font-weight: 300
+  text-align: center
+
+  .text_red
+    font-weight: 600
+
+//End of header section
+////////////
+
+
+
+////////////
+//Profit section
+
+.profit-section
+  background: #fafafa
+
+//End of profit section
+////////////
+
+
+
+////////////
+//Result section
+
+.card__icon-value_red-minus
+  width: 20px
+  height: 5px
+  background: #fff
+
+//End of result section
+////////////
+
+
+
+////////////
+//Result section
+
+.result-section
+  background: #fafafa
+
+//End of result section
+////////////
+
+.card__icon-value_red-check
+  display: block
+  width: 12px
+  height: 20px
+  border-bottom: 3px solid #fff
+  border-right: 3px solid #fff
+  transform: rotate(45deg)
+  position: relative
+  top: -2px
+
+////////////
+//Bonus section
+
+.bonus-section
+  background: $black
+
+.card__list-title_white
+  color: #fff
+  padding: 0 0 0 32px
+  position: relative
+  font-size: 18px
+  font-weight: 400
+  display: flex
+  align-items: flex-start
+  margin: 0 0 8px 0
+
+  &::before
+    display: block
+    content: ''
+    width: 14px
+    height: 14px
+    border-radius: 50%
+    background: transparent
+    border: 3px solid $red
+    position: absolute
+    left: -3px
+
+.card__list-text_white
+  padding: 0 0 0 32px
+  color: #fff
+  font-weight: 300
+  font-size: 14px
+  margin: 0 0 32px 0
+
+.card__list-item_white
+  &:last-child
+    .card__list-text_white
+      margin: 0
+
+.card_white
+  .section-title__button
+    margin: 0 0 12px 0
+
+
+//End of bonus section
+////////////
+
+
+
+////////////
+//Host section
+
+.host-section
+  background: #fafafa
+
+.photo-card
+  &__image
+    width: 100%
+    margin: 0 0 18px 0
+
+  &__list-item
+    padding: 0 0 0 26px
+    position: relative
+    margin: 0 0 18px 0
+
+    &::before
+      display: block
+      content: ''
+      width: 15px
+      height: 15px
+      background: $red
+      border-radius: 50%
+      position: absolute
+      left: 0
+
+  &__list-text
+    font-weight: 300
+    color: #666666
+
+//End of host section
+////////////
+
+
+
+////////////
+//Footer section
+
+.footer
+  background: $black
+  padding: 32px 0
+
+  .wrapper
+    width: 100%
+
+  &__title, &__subtitle
+    color: #fff
+    text-align: center
+
+  &__title
+    font-size: 18px
+    font-weight: 400
+    margin: 0 0 12px 0
+
+  &__subtitle
+    font-size: 14px
+    font-weight: 300
+
+  &__links
+    display: flex
+    flex-flow: column nowrap
+    align-items: center
+
+  &__link
+    color: #fff
+    font-weight: 300
+    margin: 0 0 12px 0
+
+    &:last-child
+      margin: 0
+
+  &__divider
+    color: #fff
+    display: none
+
+//End of footer section
+////////////
+
+////////////
+//Modals
+
+.modal
+  position: fixed
+  left: 0
+  top: 100vh
+  width: 100vw
+  height: 100vh
+  padding: 20px
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: -1
+  opacity: 0
+  transition: all .3s ease-in-out
+
+  &.active
+    top: 0
+    z-index: 999
+    opacity: 1
+
+  &__bg
+    background: rgba(0,0,0,.5)
+    position: absolute
+    left: 0
+    top: 0
+    display: block
+    width: 100%
+    height: 100%
+    z-index: 1000
+
+  &__body
+    background: #F1F1F1
+    z-index: 9999
+    padding: 40px 20px
+    display: flex
+    flex-flow: column nowrap
+    position: relative
+
+  .card
+    margin: 0
+
+  &__close
+    border: none
+    background: transparent
+    width: 30px
+    height: 30px
+    font-size: 30px
+    transform: rotate(45deg)
+    position: absolute
+    right: 5px
+    top: 5px
+    cursor: pointer
+    outline: none
+
+  .section-title__button
+    margin: 0 0 12px 0
+
+  &__form
+    display: flex
+    flex-flow: column nowrap
+    width: 100%
+    margin: 0 0 12px 0
+
+  &__input
+    padding: 10px
+    margin: 0 0 8px 0
+    &:last-child
+      margin: 0
+
+
+//End of modals
+////////////
+
+
+// Media
+
+//Tablets
+
+@media screen and (min-width: 768px)
+  .header, .section
+    padding: 128px 0
+
+  .wrapper
+    width: 100%
+
+  .wrapper_half
+    width: 50%
+    padding: 0 24px
+
+  .container
+    padding: 0 32px
+
+  .header
+    .wrapper_half
+      justify-content: center
+      display: flex
+      flex-flow: column nowrap
+
+
+  .header__image-block
+    display: flex
+    margin: 0
+
+  .cards-row
+    display: flex
+    flex-flow: row wrap
+
+  .card
+    width: 30%
+
+    &_white
+      margin: 0
+
+  .bonus-cards-row
+    display: flex
+    flex-flow: row nowrap
+
+  .card_half
+    width: 50%
+
+  .section-title
+
+    &__button
+      font-size: 16px
+      font-weight: 300
+
+    &__block_centered
+      display: flex
+      flex-flow: column wrap
+      align-items: center
+
+    &__subtitle
+      &_header
+        text-align: left
+      &_centered
+        display: flex
+        justify-content: center
+        flex-flow: column wrap
+
+    &__title
+      &_header
+        text-align: left
+
+        &.section-title__title_pseudo
+          &::after
+            margin: 12px 0
+
+
+  .photo-cards-row
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+
+  .photo-card
+    width: 45%
+
+  .stop-section
+    .cards-row
+      justify-content: space-between
+
+  .result-section
+    .cards-row
+      justify-content: space-between
+    .card
+      width: 45%
+
+  .profit-section
+    .cards-row
+      justify-content: space-between
+
+  .bonus-section
+    .section-title__subtitle_pseudo
+      &::after
+        margin: 24px auto
+
+  .footer
+    &__links
+      flex-flow: row nowrap
+      justify-content: center
+
+    &__divider
+      margin: 0 12px
+      display: block
+
+    &__link
+      margin: 0
+
+  .modal
+    .card
+      width: 100%
+
+    &__body
+      width: 100%
+      max-width: 400px
+
+
+@media screen and (min-width: 1366px)
+  .container
+    max-width: 1024px
+    margin: 0 auto
+
+  .result-section
+    .card
+      width: 22%
+
+  .card
+    &_black, &_white
+      padding: 64px
+
+  .section-title__button
+    width: auto
+    font-size: 18px
+    padding: 15px 30px
+    margin: 32px 0 0 0
+
+  .header__image-block
+    transform: translateY(-50px)
+
+  .section-title__title
+    font-weight: 800
+    font-size: 40px
+    margin: 0 0 12px 0
+
+  .section-title__subtitle
+    font-size: 24px
+
+  .card_half
+    .section-title__button
+      font-size: 16px
+
+@media screen and (min-width: 1920px)
+  .container
+    max-width: 1366px
+
+  .wrapper_half
+    display: flex
+    align-items: center
+
+  .bonus-cards-row
+    max-width: 1024px
+    margin: 0 auto
+
+  .section
+    &-title
+      &__title
+        font-size: 48px
+
+      &__title, &__subtitle
+        &_pseudo
+          &::after
+            height: 8px
+            width: 150px

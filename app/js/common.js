@@ -9,6 +9,14 @@ function showModal() {
     }
 }
 
+function showModalSecond() {
+    if (modal_second.classList.contains('active')) {
+        return;
+    } else {
+        modal_second.classList.add('active');
+    }
+}
+
 function hideModal() {
     modal.classList.remove('active');
     modal_second.classList.remove('active');
@@ -17,7 +25,6 @@ function hideModal() {
 function syncPhone() {
     const control = document.querySelector('.modal__phone-value');
     control.innerText = event.target.value;
-    // console.log('Changed');
 }
 
 function getValue() {
@@ -39,6 +46,7 @@ function sendForm() {
             alert('Письмо отправлено');
         }
     });
+    modal_second.classList.remove('active');
 }
 
 
@@ -48,6 +56,6 @@ function openModal() {
     const newWindow = window.open('https://t.me/joinchat/ACopV0YFjaG6I64rYLC33w', '_blank');
     newWindow.blur();
     window.focus();
-    $('.modal').toggleClass('active');
+    modal.classList.remove('active');
 }
 

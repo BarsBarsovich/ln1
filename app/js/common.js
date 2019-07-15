@@ -57,5 +57,6 @@ function openModal() {
     newWindow.blur();
     window.focus();
     modal.classList.remove('active');
+    showModalSecond();
 }
 

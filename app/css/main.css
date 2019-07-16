@@ -69,6 +69,8 @@ a, button {
   .section-title__button_red {
     background: #d84940;
     color: #fff; }
+    .section-title__button_red:hover {
+      background: #c2423a; }
 
 .text_red {
   color: #d84940; }
